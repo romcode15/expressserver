@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Interactiva con Node.js y Express.js</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a mi Página Interactiva</h1>
+    <p>Presiona el botón para realizar una acción:</p>
+    <button id="myButton">Haz clic aquí</button>
+
+    <div id="imageContainer"></div>
+
+    <script>
+        // Manejador de eventos para el botón
+        document.getElementById('myButton').addEventListener('click', function() {
+            // Crear un elemento de imagen
+            var image = document.createElement('img');
+            // Asignar la ruta de la imagen
+            image.src = 'https://i.pinimg.com/236x/98/61/26/986126eb3afecb9f9cbc1d4ad3069781.jpg'; // Coloca la ruta correcta a tu imagen
+            // Agregar la imagen al contenedor
+            document.getElementById('imageContainer').appendChild(image);
+        });
+    </script>
+</body>
+</html>
